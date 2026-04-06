@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.venv/
+
+# Build
+build/
+dist/
+*.egg-info/
+frontend/node_modules/
+frontend/dist/
+
+# Runtime artifacts
+logs/
+workspace/
+temp/
+
+# Models and large binaries
+*.gguf
+vendor/ffmpeg/*.exe
+
+# OS/editor
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Personal/test directories
+old/
+exports/
+results/
+pruebas_sepi/
+pruebas_sepi+/
+Nia Huck Web/
+
+# Misc
+*.log
+*.bak
+*.aux
+*.out
+*.pdf
+*.tex
+.claude/
+.vite/

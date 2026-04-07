@@ -12,7 +12,7 @@
   <img src="https://img.shields.io/badge/version-1.0.0-blueviolet" alt="Version" />
   <img src="https://img.shields.io/badge/platform-Windows-blue" alt="Platform" />
   <img src="https://img.shields.io/badge/python-3.11%2B-green" alt="Python" />
-  <img src="https://img.shields.io/badge/license-Proprietary-red" alt="License" />
+  <img src="https://img.shields.io/badge/license-MIT-green" alt="License" />
 </p>
 
 ---
@@ -102,7 +102,7 @@ Diaricat is a Windows desktop application that transcribes audio/video files, id
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USER/Diaricat.git
+git clone https://github.com/nia-huck/Diaricat.git
 cd Diaricat
 
 # Create Python virtual environment
@@ -237,7 +237,7 @@ Settings are stored in `config/default.yaml` and can be modified through the Set
 
 ## License
 
-Proprietary. All rights reserved.
+MIT License. All rights reserved.
 
 ---
 

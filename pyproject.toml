@@ -8,7 +8,7 @@ version = "1.0.0"
 description = "Local and private intelligent transcription pipeline for Windows desktop."
 readme = "README.md"
 requires-python = ">=3.11"
-license = { text = "Proprietary" }
+license = { text = "MIT" }
 authors = [
   { name = "Diaricat Team" }
 ]
@@ -47,6 +47,12 @@ dev = [
   "pytest-mock>=3.14.0",
   "httpx>=0.27.0"
 ]
+
+
+[project.urls]
+Homepage = "https://github.com/nia-huck/Diaricat"
+Repository = "https://github.com/nia-huck/Diaricat"
+Issues = "https://github.com/nia-huck/Diaricat/issues"
 
 [project.scripts]
 diaricat = "diaricat.main:run"

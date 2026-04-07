@@ -27,7 +27,7 @@ Diaricat is part of a broader vision for local-first AI systems focused on priva
 
 - **Accurate transcription** powered by [Faster Whisper](https://github.com/SYSTRAN/faster-whisper) (large-v3 model with CUDA acceleration)
 - **Speaker diarization** using [SpeechBrain](https://speechbrain.github.io/) ECAPA-TDNN embeddings with custom agglomerative clustering
-- **AI correction & summarization** with local LLM inference via [llama.cpp](https://github.com/ggerganov/llama.cpp) (Qwen 2.5 7B recommended)
+- **AI correction & summarization** with local LLM inference via [llama.cpp](https://github.com/ggerganov/llama.cpp), running GGUF models such as Qwen 2.5 7B Instruct (Q4_K_M)
 - **100% offline & private** &mdash; no API keys, no cloud services, no data upload
 - **Bilingual UI** &mdash; Spanish and English with one-click toggle
 - **Multiple export formats** &mdash; TXT, SRT, DOCX, PDF, JSON
@@ -172,7 +172,17 @@ The build uses **onedir mode** for fast startup (~1 second vs minutes for onefil
 
 ## LLM Models
 
-Diaricat supports local GGUF models for transcript correction and summarization. Without a model, it falls back to rule-based processing.
+Diaricat uses **llama.cpp** as the local inference engine for transcript correction and summarization, running **GGUF-compatible models**. Without a configured model, it falls back to rule-based processing.
+
+### Default / Recommended model
+
+- **Qwen 2.5 7B Instruct (Q4_K_M)** — configured by default for the local post-processing pipeline
+
+### Runtime details
+
+- Default model path: `models/qwen2.5-7b-instruct-q4_k_m.gguf`
+- Context size: `4096`
+- Inference engine: `llama.cpp`
 
 ### Recommended Models
 
@@ -182,7 +192,7 @@ Diaricat supports local GGUF models for transcript correction and summarization.
 | Qwen 2.5 3B (Q4_K_M) | ~2 GB | 6 GB | Good |
 | **Qwen 2.5 7B (Q4_K_M)** | ~4.7 GB | 10 GB | **Best** |
 
-Place the `.gguf` file in `workspace/models/` and configure the path in Settings.
+Place the `.gguf` file in `workspace/models/` and configure the path in Settings. Model path and runtime parameters can be updated from the application Settings screen.
 
 ---
 
@@ -248,7 +258,7 @@ Settings are stored in `config/default.yaml` and can be modified through the Set
 
 **Frontend:** React 18 &middot; TypeScript &middot; Vite &middot; Tailwind CSS &middot; Radix UI &middot; shadcn/ui &middot; Lucide Icons
 
-**AI Models:** Whisper large-v3 (ASR) &middot; ECAPA-TDNN (speaker embeddings) &middot; Qwen 2.5 7B (correction/summary)
+**AI Models:** Whisper large-v3 (ASR) &middot; pyannote/speaker-diarization-3.1 + ECAPA-TDNN embeddings (diarization) &middot; Qwen 2.5 7B Instruct Q4_K_M (correction/summary via llama.cpp)
 
 ---
 

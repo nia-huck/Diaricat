@@ -21,6 +21,8 @@
 
 Diaricat is a Windows desktop application that transcribes audio/video files, identifies who said what (speaker diarization), and generates AI-powered summaries &mdash; **all running locally on your machine**. No data ever leaves your computer.
 
+Diaricat is part of a broader vision for local-first AI systems focused on privacy, autonomy, and offline intelligence.
+
 ### Key Features
 
 - **Accurate transcription** powered by [Faster Whisper](https://github.com/SYSTRAN/faster-whisper) (large-v3 model with CUDA acceleration)
@@ -30,6 +32,21 @@ Diaricat is a Windows desktop application that transcribes audio/video files, id
 - **Bilingual UI** &mdash; Spanish and English with one-click toggle
 - **Multiple export formats** &mdash; TXT, SRT, DOCX, PDF, JSON
 - **Modern dark UI** &mdash; glassmorphism design built with React + Tailwind CSS
+
+---
+
+## Design Philosophy
+
+Diaricat follows a design language I call **Purple Space Glass**.
+
+It blends glassmorphism, deep-space aesthetics and soft neon reflections to create interfaces that feel both modern and fluid — almost like interacting with an intelligent system rather than a static tool.
+
+The goal is not just visual appeal, but to make AI systems feel:
+- responsive
+- ambient
+- alive, without being intrusive
+
+This design direction is part of a broader vision where local AI systems are not only powerful and private, but also intuitive and pleasant to use.
 
 ---
 
@@ -237,7 +254,7 @@ Settings are stored in `config/default.yaml` and can be modified through the Set
 
 ## License
 
-MIT License. All rights reserved.
+MIT License — see LICENSE file for details.
 
 ---
 
